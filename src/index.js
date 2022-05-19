@@ -20,9 +20,8 @@ const onHandleSubmitBtnClick = () => {
     currentQuiz += 1;
     if (currentQuiz < quizData.length) {
       loadQuiz();
-    } else {
-      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick='location.reload()'>Reload</button>`;
     }
+    quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick='location.reload()'>Reload</button>`;
   }
 };
 
