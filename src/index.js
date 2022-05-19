@@ -1,50 +1,13 @@
 import './index.css';
 import { quizData } from './js/objQuiz.js';
+import { refs } from './js/refs.js';
+import { getSelected } from './js/getSelected.js';
+import { loadQuiz } from './js/loadQuiz.js';
 
-const questionEl = document.getElementById('question');
-const quiz = document.getElementById('quiz');
-const a_text = document.getElementById('a_text');
-const b_text = document.getElementById('b_text');
-const c_text = document.getElementById('c_text');
-const d_text = document.getElementById('d_text');
-const submitBtn = document.getElementById('submit');
-const answersEl = document.querySelectorAll('.answer');
-
-let currentQuiz = 0;
+export let currentQuiz = 0;
 let score = 0;
 
-const deselectAnswers = () => {
-  answersEl.forEach(answerEl => {
-    if (answerEl.checked) {
-      answerEl.checked = false;
-    }
-  });
-};
-
-const loadQuiz = () => {
-  deselectAnswers();
-
-  const currentQuizData = quizData[currentQuiz];
-
-  questionEl.innerText = currentQuizData.question;
-  a_text.innerText = currentQuizData.a;
-  b_text.innerText = currentQuizData.b;
-  c_text.innerText = currentQuizData.c;
-  d_text.innerText = currentQuizData.d;
-};
-
 loadQuiz();
-
-const getSelected = () => {
-  let answer = undefined;
-
-  answersEl.forEach(answerEl => {
-    if (answerEl.checked) {
-      answer = answerEl.id;
-    }
-  });
-  return answer;
-};
 
 const onHandleSubmitBtnClick = () => {
   const answer = getSelected();
@@ -63,4 +26,4 @@ const onHandleSubmitBtnClick = () => {
   }
 };
 
-submitBtn.addEventListener('click', onHandleSubmitBtnClick);
+refs.submitBtn.addEventListener('click', onHandleSubmitBtnClick);
