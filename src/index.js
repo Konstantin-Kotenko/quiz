@@ -1,23 +1,12 @@
 import './index.css';
 import { quizData } from './js/objQuiz.js';
 import { refs } from './js/refs.js';
-import { getSelected } from './js/getSelected';
 import { deselectAnswers } from './js/deselectAnswers';
+import { loadQuiz } from './js/loadQuiz';
+import { getSelected } from './js/getSelected';
 
-let currentQuiz = 0;
+export let currentQuiz = 0;
 let score = 0;
-
-const loadQuiz = () => {
-  deselectAnswers();
-
-  const currentQuizData = quizData[currentQuiz];
-
-  refs.questionEl.innerText = currentQuizData.question;
-  refs.a_text.innerText = currentQuizData.a;
-  refs.b_text.innerText = currentQuizData.b;
-  refs.c_text.innerText = currentQuizData.c;
-  refs.d_text.innerText = currentQuizData.d;
-};
 
 loadQuiz();
 
