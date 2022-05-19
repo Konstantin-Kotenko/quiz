@@ -1,7 +1,6 @@
 import './index.css';
 import { quizData } from './js/objQuiz.js';
 import { refs } from './js/refs.js';
-import { deselectAnswers } from './js/deselectAnswers';
 import { loadQuiz } from './js/loadQuiz';
 import { getSelected } from './js/getSelected';
 
