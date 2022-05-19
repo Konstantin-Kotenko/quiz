@@ -1,0 +1,42 @@
+export const quizData = [
+  {
+    question: 'Who is the President Ukraine',
+    a: 'Obaba',
+    b: 'Omama',
+    c: 'Opapa',
+    d: 'Zelensky',
+    correct: 'd',
+  },
+  {
+    question: 'How much days on year?',
+    a: '365',
+    b: '366',
+    c: '1',
+    d: 'don`t now',
+    correct: 'a',
+  },
+  {
+    question: 'How is name our planet?',
+    a: 'Ukraine',
+    b: 'Earth',
+    c: 'Anonymous',
+    d: 'She doesn`t has name',
+    correct: 'b',
+  },
+  {
+    question: '2+5=?',
+    a: '10',
+    b: '3',
+    c: '7',
+    d: '0,4',
+    correct: 'c',
+  },
+  {
+    question: 'What year is it now?',
+    a: 'Dragon',
+    b: 'monkey',
+    c: 'BC',
+    d: '2022',
+    correct: 'd',
+  },
+];
